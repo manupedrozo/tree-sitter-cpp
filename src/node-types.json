@@ -7663,6 +7663,10 @@
     "named": false
   },
   {
+    "type": "global",
+    "named": false
+  },
+  {
     "type": "goto",
     "named": false
   },
@@ -7676,6 +7680,10 @@
   },
   {
     "type": "inline",
+    "named": false
+  },
+  {
+    "type": "internal",
     "named": false
   },
   {

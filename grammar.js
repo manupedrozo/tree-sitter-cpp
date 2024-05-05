@@ -18,6 +18,14 @@ const PREC = Object.assign(C.PREC, {
   THREE_WAY: C.PREC.RELATIONAL + 1,
 });
 
+// ========= Manu =========
+
+const MANU_STORAGE_CLASS_SPECIFIERS = [
+  'internal', 'global',
+];
+
+// ==== =====
+
 const FOLD_OPERATORS = [
   '+', '-', '*', '/', '%',
   '^', '&', '|',
@@ -310,6 +318,7 @@ module.exports = grammar(C, {
     storage_class_specifier: (_, original) => choice(
       ...original.members.filter((member) => member.value !== 'auto'),
       'thread_local',
+      ...MANU_STORAGE_CLASS_SPECIFIERS,
     ),
 
     dependent_type: $ => prec.dynamic(-1, prec.right(seq(

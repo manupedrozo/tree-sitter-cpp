@@ -4673,6 +4673,14 @@
         {
           "type": "STRING",
           "value": "thread_local"
+        },
+        {
+          "type": "STRING",
+          "value": "internal"
+        },
+        {
+          "type": "STRING",
+          "value": "global"
         }
       ]
     },
