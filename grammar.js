@@ -716,7 +716,7 @@ module.exports = grammar(C, {
     ),
 
     template_argument_list: $ => seq(
-      '<',
+      token.immediate('<'),
       commaSep(choice(
         prec.dynamic(3, $.type_descriptor),
         prec.dynamic(2, alias($.type_parameter_pack_expansion, $.parameter_pack_expansion)),
