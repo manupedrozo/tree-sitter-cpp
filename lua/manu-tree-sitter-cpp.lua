@@ -6,7 +6,7 @@ M.setup = function()
         install_info = {
             url = "https://github.com/manupedrozo/tree-sitter-cpp",
             files = { "src/parser.c", "src/scanner.c" },
-            revision = "466d07a092214a0f82be5271a3b951bbd564610e",
+            revision = "b2da5138ba6581c25f0a3bc84815db349195ebb3",
             generate_requires_npm = true,
         },
         maintainers = { "@manupedrozo" },
