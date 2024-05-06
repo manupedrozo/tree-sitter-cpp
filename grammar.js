@@ -321,6 +321,11 @@ module.exports = grammar(C, {
       ...MANU_STORAGE_CLASS_SPECIFIERS,
     ),
 
+    primitive_type: (_, original) => token(choice(
+      ...original.content.members,
+      'v2',
+    )),
+
     dependent_type: $ => prec.dynamic(-1, prec.right(seq(
       'typename',
       $._type_specifier,
@@ -355,7 +360,7 @@ module.exports = grammar(C, {
     ),
 
     template_parameter_list: $ => seq(
-      '<',
+      token.immediate('<'),
       commaSep(choice(
         $.parameter_declaration,
         $.optional_parameter_declaration,

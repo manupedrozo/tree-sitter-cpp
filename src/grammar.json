@@ -5086,6 +5086,10 @@
           {
             "type": "STRING",
             "value": "char64_t"
+          },
+          {
+            "type": "STRING",
+            "value": "v2"
           }
         ]
       }
@@ -11577,8 +11581,11 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "<"
+          "type": "IMMEDIATE_TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "<"
+          }
         },
         {
           "type": "CHOICE",
